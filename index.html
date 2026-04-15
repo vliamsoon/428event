@@ -12,11 +12,30 @@
         .text-gold { color: #F5A623; }
         .bg-gold { background-color: #F5A623; }
         .bg-gold:hover { background-color: #E09612; }
+        /* Ambient Banner Styling */
+        .ambient-banner {
+            height: 180px;
+            position: relative;
+            overflow: hidden;
+            border-b-4 border-gold;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.3);
+        }
+        .ambient-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(1.5px) saturate(1.1) brightness(0.95);
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 leading-relaxed">
 
-    <section class="bg-navy text-white py-20 px-6">
+    <div class="ambient-banner">
+        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/4hgVHNmCzlYVkdermmCs/media/6897609c9febc822e78ecd1e.png" alt="High-level business networking event">
+        <div class="absolute inset-0 bg-navy opacity-30"></div>
+    </div>
+
+    <section class="bg-navy text-white pt-16 pb-20 px-6">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <p class="text-gold font-semibold uppercase tracking-wider mb-2">An Exclusive Interactive Business Simulation for SME Leaders</p>
@@ -31,22 +50,24 @@
             </div>
 
             <div class="bg-white rounded-lg shadow-2xl p-8 text-gray-900 max-w-md mx-auto w-full">
-                <h3 class="text-2xl font-bold mb-2 text-center">Secure Your Spot</h3>
+                <h3 class="text-2xl font-bold mb-2 text-center">Secure Your Spot at the Table</h3>
                 <p class="text-center text-red-600 font-semibold mb-6 text-sm">Strictly Limited to 20 Executive Seats.</p>
-                <form action="#" method="POST">
+                
+                <form action="https://formspree.io/f/mqewezgo" method="POST">
                     <div class="mb-4">
                         <label class="block text-sm font-semibold mb-1">Full Name</label>
-                        <input type="text" class="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="John Doe" required>
+                        <input type="text" name="Name" class="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g. John Doe" required>
                     </div>
                     <div class="mb-4">
                         <label class="block text-sm font-semibold mb-1">Phone Number</label>
-                        <input type="tel" class="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="+60 12-345 6789" required>
+                        <input type="tel" name="Phone" class="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g. +60 12-345 6789" required>
                     </div>
                     <div class="mb-6">
                         <label class="block text-sm font-semibold mb-1">Email Address</label>
-                        <input type="email" class="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="john@company.com" required>
+                        <input type="email" name="Email" class="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g. john@company.com" required>
                     </div>
-                    <button type="submit" class="w-full bg-gold text-white font-bold py-3 px-4 rounded-md transition duration-300 shadow-lg text-lg">Reserve My Seat Now</button>
+                    
+                    <button type="submit" class="w-full bg-gold text-white font-bold py-3 px-4 rounded-md transition duration-300 shadow-lg text-lg hover:-translate-y-1 transform">Reserve My Seat Now</button>
                 </form>
             </div>
         </div>
@@ -85,7 +106,7 @@
     <section class="py-20 px-6 bg-white">
         <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div class="bg-gray-200 h-80 rounded-lg flex items-center justify-center text-gray-500 shadow-inner overflow-hidden">
-                <span class="text-lg">[ Insert Professional Photo of William Soon Here ]</span>
+                <span class="text-lg text-center px-4">[ Insert Professional Photo of William Soon Here ]</span>
             </div>
             <div>
                 <h2 class="text-3xl font-bold mb-4">Guided by Experience.</h2>
@@ -124,7 +145,7 @@
         <div class="max-w-3xl mx-auto">
             <h2 class="text-3xl font-bold mb-4">The Boardroom is Almost Full.</h2>
             <p class="text-lg text-gray-600 mb-8">This is an intimate, high-impact session. To ensure personalized feedback and optimal networking, attendance is strictly capped at 20 participants.</p>
-            <a href="#" class="inline-block bg-gold text-white font-bold py-4 px-10 rounded-md transition duration-300 shadow-xl text-xl hover:-translate-y-1 transform">Claim 1 of the 20 Seats Now</a>
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="inline-block bg-gold text-white font-bold py-4 px-10 rounded-md transition duration-300 shadow-xl text-xl hover:-translate-y-1 transform">Claim 1 of the 20 Seats Now</button>
         </div>
     </section>
 
